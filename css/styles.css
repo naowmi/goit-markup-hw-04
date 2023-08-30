@@ -73,7 +73,7 @@ p {
 .header-list {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  column-gap: 40px;
 }
 
 .header-navigate-link {
@@ -84,14 +84,27 @@ p {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  position: relative;
 }
 .header-navigate-link:hover,
 .header-navigate-link:focus {
   color: var(--ocean);
 }
+.header-navigate-link:hover::after,
+.header-navigate-link:focus::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  margin-top: 20px;
+  background-color: var(--ocean);
+  border-radius: 2px;
+}
+
 .contact-list {
   display: flex;
-  gap: 40px;
+  column-gap: 40px;
 }
 .header-contact {
   color: var(--slate);
@@ -111,16 +124,16 @@ p {
 /* HERO SECTION */
 
 .hero-section {
-  height: 600px;
   padding: 188px 0;
   background-image: linear-gradient(
-    to right,
-    rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)
-  ),
-   url(/images/people-office.jpg);
-   background-position: center;
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/people-office.jpg);
+  background-color: var(--navyblue);
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .hero-section-title {
   color: var(--white);
