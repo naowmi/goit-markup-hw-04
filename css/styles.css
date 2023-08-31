@@ -80,7 +80,7 @@ p {
   align-items: flex-start;
   column-gap: 40px;
 }
-.current:hover {
+.current {
   color: var(--ocean);
 }
 .current::after {
@@ -92,7 +92,6 @@ p {
   height: 4px;
   background-color: var(--ocean);
   border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list-item .header-navigate-link {
   position: relative;
@@ -103,30 +102,15 @@ p {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-navigate-link:hover {
   color: var(--ocean);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .header-navigate-link:hover::after,
-.header-navigate-link:focus::after {
-  display: block;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background-color: var(--ocean);
-  border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
 
 .contact-list {
   display: flex;
   column-gap: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contact {
   color: var(--slate);
@@ -135,13 +119,12 @@ p {
   letter-spacing: 0.02em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--ocean);
+}
 .header-contact-container {
   font-style: normal;
-}
-
-.header-contact-container a:hover,
-.header-contact-container a:focus {
-  color: var(--ocean);
 }
 
 /* HERO SECTION */
@@ -280,7 +263,6 @@ p {
 .team-list-content {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(04, 0, 0.2, 1);
 }
 
 .team-card-content {
@@ -313,11 +295,11 @@ p {
   height: 100%;
   border-radius: 50%;
   background-color: var(--iris);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link-icon:hover,
 .team-link-icon:focus {
   background-color: var(--ocean);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-list-icon {
   fill: var(--cloud);
@@ -354,7 +336,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
-  box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card-content {
   padding: 32px 16px;
@@ -388,7 +370,6 @@ p {
 .portfolio-animation-img {
   position: relative;
   overflow: hidden;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-content:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -472,11 +453,11 @@ p {
   height: 100%;
   border-radius: 50%;
   background-color: var(--iris);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link-icon:hover,
 .footer-link-icon:focus {
   background-color: var(--green);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-list-icon {
   fill: var(--cloud);
