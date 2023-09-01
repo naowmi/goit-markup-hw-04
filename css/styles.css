@@ -80,7 +80,7 @@ p {
   align-items: flex-start;
   column-gap: 40px;
 }
-.current:hover {
+.nav-list-item .current {
   color: var(--ocean);
 }
 .current::after {
@@ -93,7 +93,7 @@ p {
   background-color: var(--ocean);
   border-radius: 2px;
 }
-.nav-list-item .header-navigate-link {
+.header-navigate-link {
   position: relative;
   color: var(--slate);
   font-size: 16px;
